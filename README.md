@@ -17,12 +17,10 @@ command initializes a working directory containing Terraform configuration files
 ```
 terraform init
 ```
-
-executes the actions proposed in a Terraform plan.  15 minutes
+executes the actions proposed in a Terraform plan.  12 mins 18.975 seconds
 ```
 terraform apply
 ```
-
 
 destroy all remote objects managed by a particular Terraform configuration.  10 minutes
 ```
