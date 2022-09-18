@@ -7,11 +7,21 @@ Terraform configuration files to provision an EKS cluster on AWS.  [Git reposito
 
 ### macOS shell commands
 ```
-brew install k9s
-brew install awscli
-brew install terraform
-brew install helm
-brew install dive
+brew install k9s        # 0.26.3
+brew install awscli     # 2.7.31
+brew install terraform  # 1.2.9
+brew install helm       # 3.9.4
+brew install dive       # 0.10.0
+```
+
+### Windows 11 build 25201 shell commands
+```
+choco upgrade all --yes
+choco install k9s                 # 0.26.3
+choco install kubernetes-cli      # 1.25.1
+choco install kubernetes-helm     # 3.9.4
+choco install terraform           # 1.2.8
+winget install --id Amazon.AWSCLI # 2.7.32
 ```
 
 command initializes a working directory containing Terraform configuration files
@@ -50,7 +60,7 @@ A logical grouping of resources which can be configured and deployed together.
 
 ### Docker
 ```
-docker run nginx -p 80:80
+docker run -p 80:80 nginx
 ```
 Chrome [http://[::1]/](http://[::1]/)
 
