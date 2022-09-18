@@ -3,7 +3,7 @@ module "eks" {
   version = "18.26.6"
 
   cluster_name    = local.cluster_name
-  cluster_version = "1.22"
+  cluster_version = "1.23"
 
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
@@ -25,7 +25,7 @@ module "eks" {
 
       min_size     = 1
       max_size     = 3
-      desired_size = 2
+      desired_size = 1
 
       pre_bootstrap_user_data = <<-EOT
       echo 'foo bar'
