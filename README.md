@@ -82,8 +82,8 @@ docker push 498902663574.dkr.ecr.us-east-2.amazonaws.com/nginx:1.23.1
 
 ### Helm
 ```
-helm create chart
-helm install chart chart/
+helm create helmchart
+helm install helmchart helmchart/
 ```
 
 ```
