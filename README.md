@@ -60,7 +60,7 @@ A logical grouping of resources which can be configured and deployed together.
 
 ### Docker
 ```
-docker run nginx -p 80:80
+docker run -p 80:80 nginx
 ```
 Chrome [http://[::1]/](http://[::1]/)
 
