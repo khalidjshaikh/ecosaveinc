@@ -1,7 +1,7 @@
 # Learn Terraform - Provision an EKS Cluster
 
 This repo is a companion repo to the [Provision an EKS Cluster learn guide](https://learn.hashicorp.com/terraform/kubernetes/provision-eks-cluster), containing
-Terraform configuration files to provision an EKS cluster on AWS.
+Terraform configuration files to provision an EKS cluster on AWS.  [Git repository](https://github.com/hashicorp/learn-terraform-provision-eks-cluster)
 
 ## Terraform 
 
@@ -10,6 +10,7 @@ Terraform configuration files to provision an EKS cluster on AWS.
 brew install k9s
 brew install awscli
 brew install terraform
+brew install helm
 ```
 
 command initializes a working directory containing Terraform configuration files
@@ -17,21 +18,20 @@ command initializes a working directory containing Terraform configuration files
 terraform init
 ```
 
-executes the actions proposed in a Terraform plan.
+executes the actions proposed in a Terraform plan.  15 minutes
 ```
 terraform apply
 ```
 
 
-destroy all remote objects managed by a particular Terraform configuration.
+destroy all remote objects managed by a particular Terraform configuration.  10 minutes
 ```
 terraform destroy
 ```
-10 minutes
 
 Configures kubectl so that you can connect to an Amazon EKS cluster.
 ```
-aws eks update-kubeconfig --region us-east-2 --name education-eks-AigzxMHn
+aws eks update-kubeconfig --region us-east-2 --name eks-BhumBtU0
 ```
 
 ### Provider
@@ -46,3 +46,34 @@ A logical grouping of resources which can be configured and deployed together.
 
 
 [Quick reference](https://www.jeremyjordan.me/terraform-quick-reference/)
+
+---
+
+### Docker
+```
+docker run nginx -p 80:80
+```
+Chrome [http://[::1]/](http://[::1]/)
+
+```
+docker tag nginx:latest 498902663574.dkr.ecr.us-east-2.amazonaws.com/nginx:1.23.1
+```
+
+### ECR
+```
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 498902663574.dkr.ecr.us-east-2.amazonaws.com
+# Login Succeeded
+```
+Reference: [ECR CLI](https://docs.aws.amazon.com/AmazonECR/latest/userguide/getting-started-cli.html)
+
+### Docker
+```
+docker push 498902663574.dkr.ecr.us-east-2.amazonaws.com/nginx:1.23.1
+```
+
+### Helm
+```
+helm create chart
+helm install chart chart/
+```
+Reference: [Helm Chart](https://phoenixnap.com/kb/create-helm-chart)
