@@ -74,4 +74,8 @@ docker push 498902663574.dkr.ecr.us-east-2.amazonaws.com/nginx:1.23.1
 helm create chart
 helm install chart chart/
 ```
+
+```
+helm uninstall chart
+```
 Reference: [Helm Chart](https://phoenixnap.com/kb/create-helm-chart)
