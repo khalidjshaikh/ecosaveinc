@@ -89,12 +89,12 @@ helm install nginx nginx/
 
 Port Forwarding to Access Applications in a Cluster
 ```
-kubectl port-forward service/helmchart 80:80
+kubectl port-forward service/nginx-helmchart 80:80
 ```
 Chrome [http://[::1]](http://[::1])
 
 ```
-helm uninstall helmchart
+helm uninstall nginx
 ```
 Reference: [Helm Chart](https://phoenixnap.com/kb/create-helm-chart)
 
@@ -104,6 +104,10 @@ helm install modsecurity modsecurity/
 ```
 Port Forwarding to Access Applications in a Cluster
 ```
-kubectl port-forward service/modsecurity 80:80
+kubectl port-forward service/modsecurity-helmchart 80:80
 ```
 Chrome [http://[::1]](http://[::1])
+
+```
+helm uninstall modsecurity
+```
