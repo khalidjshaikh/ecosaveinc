@@ -11,6 +11,7 @@ brew install k9s
 brew install awscli
 brew install terraform
 brew install helm
+brew install dive
 ```
 
 command initializes a working directory containing Terraform configuration files
