@@ -12,6 +12,7 @@ brew install awscli     # 2.7.31
 brew install terraform  # 1.2.9
 brew install helm       # 3.9.4
 brew install dive       # 0.10.0
+brew install jq         # 1.6
 ```
 
 ### Windows 11 build 25201 shell commands
@@ -40,7 +41,7 @@ terraform destroy
 
 Configures kubectl so that you can connect to an Amazon EKS cluster.
 ```
-aws eks update-kubeconfig --region us-east-2 --name eks-BhumBtU0
+aws eks update-kubeconfig --region us-east-2 --name $(aws eks list-clusters | jq -r '.clusters[]')
 ```
 
 ### Provider
