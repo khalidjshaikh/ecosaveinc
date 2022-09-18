@@ -82,8 +82,9 @@ docker push 498902663574.dkr.ecr.us-east-2.amazonaws.com/nginx:1.23.1
 
 ### Helm
 ```
-helm create helmchart
-helm install helmchart helmchart/
+cd helmchart
+helm create nginx
+helm install nginx nginx/
 ```
 
 Port Forwarding to Access Applications in a Cluster
