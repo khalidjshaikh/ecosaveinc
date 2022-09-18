@@ -86,7 +86,14 @@ helm create helmchart
 helm install helmchart helmchart/
 ```
 
+Port Forwarding to Access Applications in a Cluster
 ```
-helm uninstall chart
+kubectl port-forward service/helmchart 80:80
+```
+Chrome [http://[::1](http://[::1])
+
+```
+helm uninstall helmchart
 ```
 Reference: [Helm Chart](https://phoenixnap.com/kb/create-helm-chart)
+
