@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: owasp/modsecurity
-  pullPolicy: IfNotPresent
+  repository: 498902663574.dkr.ecr.us-east-2.amazonaws.com/modsecurity
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
