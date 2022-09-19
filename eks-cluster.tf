@@ -28,7 +28,7 @@ module "eks" {
       desired_size = 1
 
       pre_bootstrap_user_data = <<-EOT
-      echo 'foo bar'
+      echo 'hello world'
       EOT
 
       vpc_security_group_ids = [
